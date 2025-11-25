@@ -1,0 +1,1 @@
+In this project we have made a RAG application which can give answer from any document such as PDF or Word document and we have used Pinecone as the vector database.
