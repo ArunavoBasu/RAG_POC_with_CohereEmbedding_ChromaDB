@@ -2,3 +2,9 @@ python-dotenv
 pypdf
 langchain
 langchain_openai
+langchain-community
+pinecone
+langchain_cohere
+chromadb 
+sentence-transformers
+groq
