@@ -4,4 +4,4 @@
 3. CohereEmbeddings for creating the vectors.
 
 
-### Groq api key has been used here.
+### Groq api key has been used here. 
