@@ -2,6 +2,7 @@
 1. Langchain framework. 
 2. ChromaDB as the vector database
 3. CohereEmbeddings for creating the vectors.
+4. Streamlit for UI.
 
 
 ### Groq api key has been used here. 
