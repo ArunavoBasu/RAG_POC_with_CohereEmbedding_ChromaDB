@@ -2,17 +2,25 @@ import logging
 import os
 from datetime import datetime
 
-### Initializing the logger
 def logger_func():
-    try: 
-            os.makedirs("logs", exist_ok=True)
-            log_file_name = datetime.now().strftime("logs/run_%H-%M-%S.log")
-            logging.basicConfig(
-                filename=log_file_name,
-                format="%(asctime)s | %(levelname)s | %(message)s"
-            )
-            logger = logging.getLogger()
-            return logger
+    os.makedirs("logs", exist_ok=True)
 
-    except Exception as LogFileError:
-        print (LogFileError)
+    log_file_name = datetime.now().strftime("run_%Y-%m-%d_%H-%M-%S.log")
+    log_file_path = os.path.join("logs", log_file_name)
+
+    logger = logging.getLogger("RAG_LOGGER")
+    logger.setLevel(logging.INFO)
+
+    # Prevent duplicate handlers
+    if not logger.handlers:
+
+        # File Handler
+        fh = logging.FileHandler(log_file_path, encoding="utf-8")
+        fh.setLevel(logging.INFO)
+
+        formatter = logging.Formatter("%(asctime)s | %(levelname)s | %(message)s")
+        fh.setFormatter(formatter)
+
+        logger.addHandler(fh)
+
+    return logger

@@ -1,0 +1,11 @@
+"""
+You are an expert assistant. Use ONLY the following context to answer.
+
+CONTEXT:
+{context}
+
+QUESTION:
+{question}
+
+ANSWER:
+"""

@@ -8,3 +8,4 @@ langchain_cohere
 chromadb 
 sentence-transformers
 groq
+streamlit
